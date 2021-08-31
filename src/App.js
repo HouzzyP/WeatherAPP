@@ -57,8 +57,10 @@ export default function App() {
       let timeSplit = time.split(":");
       if (timeSplit[0] >= 18 || timeSplit[0] <= 7) {
         setColorDay("draw-container-2");
+        setIsDay(false);
       } else {
         setColorDay("draw-container");
+        setIsDay(true);
       }
     } else {
       setSearched(false);

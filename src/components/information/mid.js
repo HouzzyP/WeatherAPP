@@ -1,7 +1,14 @@
 import { useState } from "react";
 
 export const Mid = (props) => {
-  const { temp, searched, humidity, imgCurrentWeather, colorday } = props;
+  const {
+    temp,
+    searched,
+    humidity,
+    imgCurrentWeather,
+    colorday,
+    isDay
+  } = props;
   const [clase, setClase] = useState();
 
   const color = ["255, 255, 255, 0.6", "0, 0, 0, 0.2"];
@@ -11,7 +18,7 @@ export const Mid = (props) => {
       {!searched ? (
         <div className="mid-container">
           <h2 className="temp">Temp C°</h2>
-          <div className="draw-container-2">Clima</div>
+          <div className="draw-container">Clima</div>
           <h2 className="humidity">Humedad</h2>
         </div>
       ) : (
@@ -21,7 +28,7 @@ export const Mid = (props) => {
             <h2>{temp}°C</h2>
           </div>
           {/* Programar el cambio de color de fondo automatico*/}
-          <div className="draw-container-2">
+          <div className={isDay ? "draw-container" : "draw-container-2"}>
             <img className="draw" src={imgCurrentWeather} alt="wheaterApi" />
           </div>
           <div className="humidity">
