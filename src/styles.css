@@ -1,5 +1,5 @@
 body {
-  background: #f3f3f3;
+  background: #30475e;
   font-family: "Kaisei Decol", serif;
 }
 .App {
@@ -12,6 +12,7 @@ body {
   grid-template-rows: 70px;
   margin-bottom: 5px;
   margin-top: 0px;
+  color: white;
 }
 .container-search {
   display: grid;
@@ -27,6 +28,8 @@ body {
   border: transparent;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
+  background: #222831;
+  color: white;
 }
 
 .input-search:focus {
@@ -61,9 +64,12 @@ body {
 
 .container-info {
   grid-column: 2;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   border-radius: 3px;
   height: 643px;
+  background: #222831;
+  color: white;
 }
 
 .top-container {
@@ -72,7 +78,7 @@ body {
   height: 154px;
   grid-template-columns: 20% 30% 30% 20%;
   grid-template-rows: 50% 50%;
-  background-color: #c4c4c4;
+  background-color: #222831;
   border-radius: 3px 3px 0 0;
 }
 
@@ -105,7 +111,6 @@ body {
   height: 154px;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 1fr;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .temp {
@@ -126,7 +131,7 @@ body {
   border-top: 1px solid black;
   border-right: 1px solid black;
   border-left: 1px solid black;
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .draw-container-2 {
@@ -138,12 +143,7 @@ body {
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
-  background: linear-gradient(
-    to right,
-    #0f2027,
-    #203a43,
-    #2c5364
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .draw {
   height: 100%;
@@ -156,6 +156,9 @@ body {
   height: 100%;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
+}
+.alink {
+  color: white;
 }
 
 @media (max-width: 900px) {

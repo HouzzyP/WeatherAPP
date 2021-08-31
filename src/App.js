@@ -18,11 +18,15 @@ export default function App() {
   const [humidity, setHumidity] = useState();
   const [imgCurrentWeather, setimgCurrentWeather] = useState();
   const [colorday, setColorDay] = useState(false);
+  const [isDay, setIsDay] = useState();
 
   useEffect(() => {
     const ipInfo = async () => {
       let data = await getIP();
       console.log(data);
+      if (data === undefined) {
+        return;
+      }
       if (data.city === null) {
         if (data.country_name !== null) {
           showInfo(data.country_name);
@@ -52,9 +56,9 @@ export default function App() {
 
       let timeSplit = time.split(":");
       if (timeSplit[0] >= 18 || timeSplit[0] <= 7) {
-        setColorDay(false);
+        setColorDay("draw-container-2");
       } else {
-        setColorDay(true);
+        setColorDay("draw-container");
       }
     } else {
       setSearched(false);
@@ -87,12 +91,18 @@ export default function App() {
             temp={temp}
             searched={searched}
             colorday={colorday}
+            isDay={isDay}
+            setIsDay={setIsDay}
           />
         </div>
       </div>
-      <p>
+      <p className="alink">
         Powered by{" "}
-        <a href="https://www.weatherapi.com/" title="Free Weather API">
+        <a
+          className="alink"
+          href="https://www.weatherapi.com/"
+          title="Free Weather API"
+        >
           WeatherAPI.com
         </a>
       </p>
