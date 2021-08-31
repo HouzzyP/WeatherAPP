@@ -71,7 +71,9 @@ body {
   background: #222831;
   color: white;
 }
-
+.loader {
+  color: white;
+}
 .top-container {
   display: grid;
   width: 100%;
